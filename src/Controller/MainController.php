@@ -10,6 +10,7 @@ class MainController extends AbstractController
 {
     /**
      * @Route("/", name="app_home")
+     * d
      */
     public function index(): Response
     {

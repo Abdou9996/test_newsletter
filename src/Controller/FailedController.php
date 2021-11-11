@@ -12,6 +12,7 @@ class FailedController extends AbstractController
 {
     /**
      * @Route("/newsletters/failed", name="failed")
+     * x
      */
     public function index(FailedMessageRepository $failedMessageRepository): Response
     {

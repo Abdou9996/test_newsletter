@@ -18,7 +18,7 @@ class SendNewsletterService
     public function send(Users $user, Newsletters $newsletter):void
     {
         sleep(3);
-        // throw new \Exception('Message non envoyé');
+        // throw new \Exception('Message non envoyé');x
         $email = (new TemplatedEmail())
             ->from('newsletter@site.fr')
             ->to($user->getEmail())

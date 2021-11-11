@@ -22,7 +22,7 @@ final class SendNewsletterMessageHandler implements MessageHandlerInterface
 
     public function __invoke(SendNewsletterMessage $message)
     {
-        // do something with your message
+        // do something with your messagex
         $user = $this->em->find(Users::class, $message->getUserId());
         $newsletter = $this->em->find(Newsletters::class, $message->getNewsId());
 

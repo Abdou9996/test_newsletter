@@ -22,7 +22,7 @@ class FailedMessageSubscriber implements EventSubscriberInterface
             WorkerMessageFailedEvent::class => 'onMessageFailed'
         ];
     }
-
+//dzdz
     public function onMessageFailed(WorkerMessageFailedEvent $event): void
     {
         $error = get_class($event->getEnvelope()->getMessage());

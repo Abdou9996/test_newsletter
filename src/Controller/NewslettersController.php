@@ -24,6 +24,7 @@ class NewslettersController extends AbstractController
 {
     /**
      * @Route("/", name="home")
+     * c
      */
     public function index(Request $request, MailerInterface $mailer): Response
     {

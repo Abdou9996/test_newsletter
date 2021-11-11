@@ -6,7 +6,7 @@ final class SendNewsletterMessage
 {
     /*
      * Add whatever properties & methods you need to hold the
-     * data for this message class.x
+     * data for this message class.xx
      */
     private $userId;
     private $newsId;

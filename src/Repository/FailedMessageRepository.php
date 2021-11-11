@@ -17,7 +17,7 @@ class FailedMessageRepository
 
     public function findAll()
     {
-        // return $this->receiver->all();
+        // return $this->receiver->all();x
         return array_map(fn (Envelope $envelope) => new FailedMessage($envelope), 
             iterator_to_array($this->receiver->all())
         );

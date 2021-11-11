@@ -11,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Newsletters
 {
     /**
+     * cd
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")

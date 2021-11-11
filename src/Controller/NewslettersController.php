@@ -117,13 +117,23 @@ class NewslettersController extends AbstractController
     /**
      * @Route("/send/{id}", name="send")
      */
-    public function send(Newsletters $newsletter, MessageBusInterface $messageBus): Response
+    public function send(Newsletters $newsletter, MailerInterface $mailer): Response
     {
         $users = $newsletter->getCategories()->getUsers();
 
         foreach($users as $user){
             if($user->getIsValid()){
-                $messageBus->dispatch(new SendNewsletterMessage($user->getId(), $newsletter->getId()));
+                /* $messageBus->dispatch(new SendNewsletterMessage($user->getId(), $newsletter->getId())); */
+                $email = (new TemplatedEmail())
+                ->from('newsletter@site.fr')
+                ->to($user->getEmail())
+                ->subject($newsletter->getName())
+                ->htmlTemplate('emails/newsletter.html.twig')
+                ->context(compact('newsletter', 'user'))
+                ;
+
+            $mailer->send($email);
+           
             }
         }
 

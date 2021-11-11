@@ -107,7 +107,10 @@ class Users
 
         return $this;
     }
-
+    public function __toString()
+    {
+        return $this->email;
+    }
     public function getIsValid(): ?bool
     {
         return $this->is_valid;

@@ -14,6 +14,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class NewslettersType extends AbstractType
 {
+    //cd
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
